@@ -1,0 +1,13 @@
+version: "3.7"
+
+services: 
+  
+  tornado:
+    build: ./tornado_app
+    container_name: tornado
+    working_dir: /app
+    volumes: 
+      - ./tornado_app:/app
+    ports: 
+      - "8069:8069"
+    network_mode: host
